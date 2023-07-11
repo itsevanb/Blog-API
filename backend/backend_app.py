@@ -24,7 +24,7 @@ def get_posts():
     
     if sort is not None:
         posts_copy = posts.copy()
-        posts_copy.sort(keys=lambda x: x[sort])
+        posts_copy.sort(key=lambda x: x[sort])
         if direction == "desc":
             posts_copy.reverse()
         return jsonify(posts_copy), 200
